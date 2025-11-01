@@ -39,6 +39,9 @@ web/themes/contrib
 #web/themes/**/bower_components
 #web/themes/**/.sass-cache
 
+/kaggle-data/*.sqlite3
+/kaggle-data/*.csv
+
 # If you prefer to store your .gitignore file in the web/sites/ folder, comment
 # or delete the previous settings and uncomment the following ones, instead.
 
