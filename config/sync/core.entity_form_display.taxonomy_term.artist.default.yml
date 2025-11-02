@@ -1,0 +1,56 @@
+uuid: 269b7ed3-84ae-437d-8c86-20483fcaf760
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.artist.field_artist_id
+    - field.field.taxonomy_term.artist.field_artist_url
+    - taxonomy.vocabulary.artist
+  module:
+    - link
+    - text
+id: taxonomy_term.artist.default
+targetEntityType: taxonomy_term
+bundle: artist
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_id:
+    type: string_textfield
+    weight: 101
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_url:
+    type: link_default
+    weight: 102
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

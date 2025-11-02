@@ -1,0 +1,9 @@
+uuid: ffe7671f-2a0d-4553-ae96-9fca55ec6592
+langcode: en
+status: true
+dependencies: {  }
+name: Labels
+vid: label
+description: 'Record labels'
+weight: 0
+new_revision: false

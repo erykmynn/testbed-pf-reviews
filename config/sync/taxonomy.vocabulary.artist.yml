@@ -1,0 +1,9 @@
+uuid: 81f4ccd9-8695-46ba-b251-729c9e6dc7f8
+langcode: en
+status: true
+dependencies: {  }
+name: Artists
+vid: artist
+description: 'Musical artists'
+weight: 0
+new_revision: false

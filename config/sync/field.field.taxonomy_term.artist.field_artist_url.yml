@@ -1,0 +1,23 @@
+uuid: 430d8010-5d02-4cd7-8972-644d02a7070a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_artist_url
+    - taxonomy.vocabulary.artist
+  module:
+    - link
+id: taxonomy_term.artist.field_artist_url
+field_name: field_artist_url
+entity_type: taxonomy_term
+bundle: artist
+label: 'Artist Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link
