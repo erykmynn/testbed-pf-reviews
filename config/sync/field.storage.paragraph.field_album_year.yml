@@ -1,0 +1,19 @@
+uuid: c4fc3442-e07e-4f3b-b318-1fa8fab17561
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - yearonly
+id: paragraph.field_album_year
+field_name: field_album_year
+entity_type: paragraph
+type: yearonly
+settings: {  }
+module: yearonly
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: 7b51a923-7153-473b-9292-aab2d4e39321
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_album_genre
+    - paragraphs.paragraphs_type.album_detail
+    - taxonomy.vocabulary.genre
+id: paragraph.album_detail.field_album_genre
+field_name: field_album_genre
+entity_type: paragraph
+bundle: album_detail
+label: Genre
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      genre: genre
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: cbaf6240-11e8-4e3e-8386-e687c832c4be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_album_best_reissues
+    - paragraphs.paragraphs_type.album_detail
+id: paragraph.album_detail.field_album_best_reissues
+field_name: field_album_best_reissues
+entity_type: paragraph
+bundle: album_detail
+label: 'Best Reissues'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'True'
+  off_label: 'False'
+field_type: boolean

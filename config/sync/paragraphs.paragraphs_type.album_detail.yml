@@ -1,0 +1,10 @@
+uuid: 8a6bb78a-0e73-46a7-82c2-7643c9f72e89
+langcode: en
+status: true
+dependencies: {  }
+id: album_detail
+label: 'Album Detail'
+icon_uuid: null
+icon_default: null
+description: 'Details specific to the individual album entries.'
+behavior_plugins: {  }

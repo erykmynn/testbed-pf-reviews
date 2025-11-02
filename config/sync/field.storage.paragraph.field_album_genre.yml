@@ -1,0 +1,20 @@
+uuid: 8e3997ef-3b55-446b-ab1e-7b6f0a381603
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_album_genre
+field_name: field_album_genre
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,77 @@
+uuid: 2036358b-8a90-4d72-94c0-41c551c8f10c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.album_detail.field_album_best_new
+    - field.field.paragraph.album_detail.field_album_best_reissues
+    - field.field.paragraph.album_detail.field_album_genre
+    - field.field.paragraph.album_detail.field_album_id
+    - field.field.paragraph.album_detail.field_album_rating
+    - field.field.paragraph.album_detail.field_album_title
+    - field.field.paragraph.album_detail.field_album_year
+    - paragraphs.paragraphs_type.album_detail
+  module:
+    - yearonly
+id: paragraph.album_detail.default
+targetEntityType: paragraph
+bundle: album_detail
+mode: default
+content:
+  field_album_best_new:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_album_best_reissues:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_album_genre:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_album_id:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_album_rating:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_album_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_album_year:
+    type: yearonly_default
+    weight: 7
+    region: content
+    settings:
+      sort_order: asc
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

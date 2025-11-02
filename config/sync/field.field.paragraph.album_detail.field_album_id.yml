@@ -1,0 +1,19 @@
+uuid: f3ca62d3-1c78-46df-a308-a2dab460b4a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_album_id
+    - paragraphs.paragraphs_type.album_detail
+id: paragraph.album_detail.field_album_id
+field_name: field_album_id
+entity_type: paragraph
+bundle: album_detail
+label: 'Album ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

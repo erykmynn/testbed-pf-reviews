@@ -1,0 +1,83 @@
+uuid: fa52ee92-8e34-445d-b96f-5cb9598291bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.album_detail.field_album_best_new
+    - field.field.paragraph.album_detail.field_album_best_reissues
+    - field.field.paragraph.album_detail.field_album_genre
+    - field.field.paragraph.album_detail.field_album_id
+    - field.field.paragraph.album_detail.field_album_rating
+    - field.field.paragraph.album_detail.field_album_title
+    - field.field.paragraph.album_detail.field_album_year
+    - paragraphs.paragraphs_type.album_detail
+  module:
+    - yearonly
+id: paragraph.album_detail.default
+targetEntityType: paragraph
+bundle: album_detail
+mode: default
+content:
+  field_album_best_new:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_album_best_reissues:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_album_genre:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_album_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_album_rating:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_album_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_album_year:
+    type: yearonly_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden: {  }

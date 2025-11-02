@@ -1,0 +1,18 @@
+uuid: 1cfc256b-87e8-4064-ad66-23da99a90bb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_album_best_new
+field_name: field_album_best_new
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

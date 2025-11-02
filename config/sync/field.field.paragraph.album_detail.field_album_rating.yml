@@ -1,0 +1,23 @@
+uuid: 27f5ac5c-2c25-46f2-bf09-30a34ca1ebc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_album_rating
+    - paragraphs.paragraphs_type.album_detail
+id: paragraph.album_detail.field_album_rating
+field_name: field_album_rating
+entity_type: paragraph
+bundle: album_detail
+label: Rating
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: 10.0
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,23 @@
+uuid: 77b01470-80a6-4116-82f3-ccaf73e57cb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_album_year
+    - paragraphs.paragraphs_type.album_detail
+  module:
+    - yearonly
+id: paragraph.album_detail.field_album_year
+field_name: field_album_year
+entity_type: paragraph
+bundle: album_detail
+label: 'Album Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1900'
+  yearonly_to: now
+field_type: yearonly

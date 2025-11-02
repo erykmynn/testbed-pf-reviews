@@ -1,0 +1,21 @@
+uuid: 3810cb08-cf9a-4217-8d67-0c32fa1aaf28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_album_best_new
+    - paragraphs.paragraphs_type.album_detail
+id: paragraph.album_detail.field_album_best_new
+field_name: field_album_best_new
+entity_type: paragraph
+bundle: album_detail
+label: 'Best New Music'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'True'
+  off_label: Fales
+field_type: boolean
