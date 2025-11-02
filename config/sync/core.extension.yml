@@ -4,6 +4,7 @@ module:
   block: 0
   config: 0
   contextual: 0
+  datetime: 0
   dblog: 0
   dynamic_page_cache: 0
   entity_reference_revisions: 0
@@ -27,6 +28,7 @@ module:
   text: 0
   update: 0
   user: 0
+  yearonly: 0
   paragraphs: 11
   minimal: 1000
 theme:
