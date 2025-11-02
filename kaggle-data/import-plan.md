@@ -24,12 +24,12 @@ Tombstones Paragraph (rename):
 
 
 Review - Node:
-titles,
-tombstone_ids,
-artist_ids,
-genres,
-authors,
-review_url,
-is_standard_review,
-pub_date,
-body
+    titles,
+    tombstone_ids,
+    artist_ids,
+    genres,
+    authors,
+    review_url,
+    is_standard_review,
+    pub_date,
+    body
