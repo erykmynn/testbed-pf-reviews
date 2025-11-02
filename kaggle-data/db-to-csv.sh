@@ -11,13 +11,15 @@ if [[ ! -f "$DB_FILE" ]]; then
     exit 1
 fi
 
+mkdir -p "$SCRIPT_DIR/csv"
+
 # THIS IS THE EXECUTION function
 function sqlcsv_call() {
     echo $query $limit_opt;
 sqlite3 "$DB_FILE" <<EOF
 .headers on
 .mode csv
-.output "$SCRIPT_DIR/$output_file"
+.output "$SCRIPT_DIR/csv/$output_file"
 $query $limit_opt;
 .output stdout
 EOF
