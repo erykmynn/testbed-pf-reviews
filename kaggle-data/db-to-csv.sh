@@ -15,7 +15,7 @@ mkdir -p "$SCRIPT_DIR/csv"
 
 # THIS IS THE EXECUTION function
 function sqlcsv_call() {
-    echo $query $limit_opt;
+    # echo $query $limit_opt;
 sqlite3 "$DB_FILE" <<EOF
 .headers on
 .mode csv
@@ -71,13 +71,21 @@ sqlcsv_call
 output_file="reviews.csv"
 query="WITH TombstoneInfo AS (
     SELECT
-        review_url,
-        GROUP_CONCAT(title, ' / ') AS titles,
-        JSON_GROUP_ARRAY(review_tombstone_id) AS tombstone_ids
-    FROM
-        tombstones
+        T1.review_url,
+        GROUP_CONCAT(T1.title, ' / ') AS titles,
+        GROUP_CONCAT(T1.review_tombstone_id) AS tombstone_ids
+    FROM (
+        SELECT
+            review_url,
+            title,
+            review_tombstone_id
+        FROM
+            tombstones
+        ORDER BY
+            review_url, picker_index ASC
+    ) AS T1
     GROUP BY
-        review_url
+        T1.review_url
 ),
 ArtistGroup AS (
     SELECT
