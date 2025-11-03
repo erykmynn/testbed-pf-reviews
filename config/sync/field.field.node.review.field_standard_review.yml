@@ -1,0 +1,21 @@
+uuid: 2009ee1e-dbb8-471b-99ea-bfa5860764fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_standard_review
+    - node.type.review
+id: node.review.field_standard_review
+field_name: field_standard_review
+entity_type: node
+bundle: review
+label: 'Standard Review'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'True'
+  off_label: 'False'
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: d11c9ca5-58e0-4a47-8d22-dcc8f900756d
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_review_url
+field_name: field_review_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

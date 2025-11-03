@@ -1,0 +1,29 @@
+uuid: 57354c52-305b-442e-af0c-c4632088cd4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.review
+    - taxonomy.vocabulary.author
+id: node.review.field_author
+field_name: field_author
+entity_type: node
+bundle: review
+label: Author
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      author: author
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

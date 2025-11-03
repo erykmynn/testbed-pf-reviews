@@ -1,0 +1,31 @@
+uuid: 25fbb2e7-ff67-4180-a0d5-68952ca05fd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_album_detail
+    - node.type.review
+    - paragraphs.paragraphs_type.album_detail
+  module:
+    - entity_reference_revisions
+id: node.review.field_album_detail
+field_name: field_album_detail
+entity_type: node
+bundle: review
+label: 'Album Detail'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      album_detail: album_detail
+    negate: 0
+    target_bundles_drag_drop:
+      album_detail:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions
