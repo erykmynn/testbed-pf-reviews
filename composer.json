@@ -26,7 +26,10 @@
         "drupal/navigation_extra_tools": "^1.0",
         "drupal/paragraphs": "^1.19",
         "drupal/yearonly": "^9.1",
-        "drush/drush": "^13.6"
+        "drush/drush": "^13.6",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_source_csv": "^3.7",
+        "drupal/migrate_tools": "^6.1"
     },
     "conflict": {
         "drupal/drupal": "*"
