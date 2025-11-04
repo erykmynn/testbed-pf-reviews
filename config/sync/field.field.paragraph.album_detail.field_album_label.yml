@@ -1,16 +1,16 @@
-uuid: 7b51a923-7153-473b-9292-aab2d4e39321
+uuid: 6d0b938d-1919-49ed-bbf1-710f97202012
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_album_genre
+    - field.storage.paragraph.field_album_label
     - paragraphs.paragraphs_type.album_detail
-    - taxonomy.vocabulary.genre
-id: paragraph.album_detail.field_album_genre
-field_name: field_album_genre
+    - taxonomy.vocabulary.label
+id: paragraph.album_detail.field_album_label
+field_name: field_album_label
 entity_type: paragraph
 bundle: album_detail
-label: Genre
+label: 'Album Label'
 description: ''
 required: false
 translatable: false
@@ -20,10 +20,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      genre: genre
+      label: label
     sort:
       field: name
       direction: asc
-    auto_create: true
+    auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

@@ -5,8 +5,8 @@ dependencies:
   config:
     - field.field.paragraph.album_detail.field_album_best_new
     - field.field.paragraph.album_detail.field_album_best_reissues
-    - field.field.paragraph.album_detail.field_album_genre
     - field.field.paragraph.album_detail.field_album_id
+    - field.field.paragraph.album_detail.field_album_label
     - field.field.paragraph.album_detail.field_album_rating
     - field.field.paragraph.album_detail.field_album_title
     - field.field.paragraph.album_detail.field_album_year
@@ -32,21 +32,21 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  field_album_genre:
-    type: entity_reference_autocomplete
-    weight: 6
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_album_id:
     type: string_textfield
     weight: 3
     region: content
     settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_album_label:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }

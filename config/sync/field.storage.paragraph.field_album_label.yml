@@ -1,12 +1,12 @@
-uuid: 8e3997ef-3b55-446b-ab1e-7b6f0a381603
+uuid: 5876ae50-d644-4435-a4e3-ddc6a58ebadc
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
     - taxonomy
-id: paragraph.field_album_genre
-field_name: field_album_genre
+id: paragraph.field_album_label
+field_name: field_album_label
 entity_type: paragraph
 type: entity_reference
 settings:
