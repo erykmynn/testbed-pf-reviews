@@ -73,7 +73,7 @@ query="WITH TombstoneInfo AS (
     SELECT
         T1.review_url,
         GROUP_CONCAT(T1.title, ' / ') AS titles,
-        GROUP_CONCAT(T1.review_tombstone_id) AS tombstone_ids
+        JSON_GROUP_ARRAY(T1.review_tombstone_id) AS tombstone_ids
     FROM (
         SELECT
             review_url,

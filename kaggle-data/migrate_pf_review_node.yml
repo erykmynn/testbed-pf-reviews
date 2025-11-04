@@ -36,22 +36,16 @@ process:
   - plugin: callback
     callable: json_decode
     source: tombstone_ids
-  field_album_detail:
-    plugin: sub_process
+  tmp_album_lookup:
+  - plugin: migration_lookup
+    migration: migrate_pf_albums_para
     source: '@tmp_album_explode'
-    process:
-      target_id:
-        plugin: entity_lookup
-        source: value
-        value_key: field_album_id
-        bundle: album_detail
-        entity_type: paragraph
-    # plugin: entity_lookup
-    # value_key: field_album_id
-    # bundle: album_detail
-    # entity_type: paragraph
-    # ignore_case: true
-    # source: '@tmp_album_explode'
+  field_album_detail:
+    - plugin: sub_process
+      source: '@tmp_album_lookup'
+      process:
+        target_id: '0'
+        target_revision_id: '1'
   tmp_artist_explode:
   - plugin: callback
     callable: json_decode
@@ -101,5 +95,5 @@ destination:
   plugin: 'entity:node'
   default_bundle: review
 idMap: {  }
-migration_dependencies: null
+migration_dependencies: 
 include: null
