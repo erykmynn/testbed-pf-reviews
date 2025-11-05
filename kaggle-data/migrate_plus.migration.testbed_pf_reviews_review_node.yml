@@ -33,27 +33,23 @@ process:
       - review_url
     skip_on_empty: false
   tmp_album_explode:
-    -
-      plugin: callback
-      callable: json_decode
-      source: tombstone_ids
+    plugin: callback
+    callable: json_decode
+    source: tombstone_ids
   tmp_album_lookup:
-    -
-      plugin: migration_lookup
-      migration: migrate_pf_albums_para
-      source: '@tmp_album_explode'
+    plugin: migration_lookup
+    migration: testbed_pf_reviews_albums_para
+    source: '@tmp_album_explode'
   field_album_detail:
-    -
-      plugin: sub_process
-      source: '@tmp_album_lookup'
-      process:
-        target_id: '0'
-        target_revision_id: '1'
+    plugin: sub_process
+    source: '@tmp_album_lookup'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
   tmp_artist_explode:
-    -
-      plugin: callback
-      callable: json_decode
-      source: artist_ids
+    plugin: callback
+    callable: json_decode
+    source: artist_ids
   field_artist:
     plugin: entity_lookup
     value_key: field_artist_id
@@ -62,10 +58,9 @@ process:
     ignore_case: true
     source: '@tmp_artist_explode'
   tmp_genre_explode:
-    -
-      plugin: callback
-      callable: json_decode
-      source: genres
+    plugin: callback
+    callable: json_decode
+    source: genres
   field_genre:
     plugin: entity_generate
     value_key: name
@@ -74,10 +69,9 @@ process:
     ignore_case: true
     source: '@tmp_genre_explode'
   tmp_author_explode:
-    -
-      plugin: callback
-      callable: json_decode
-      source: authors
+    plugin: callback
+    callable: json_decode
+    source: authors
   field_author:
     plugin: entity_generate
     value_key: name
@@ -102,6 +96,7 @@ destination:
   default_bundle: review
 idMap: {  }
 migration_dependencies:
-  - testbed_pf_reviews_artists_taxo
-  - testbed_pf_reviews_albums_para
+  required:
+    - testbed_pf_reviews_artists_taxo
+    - testbed_pf_reviews_albums_para
 include: null
