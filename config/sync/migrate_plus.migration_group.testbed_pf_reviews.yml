@@ -1,0 +1,10 @@
+uuid: d6816b71-7546-48c2-ab9e-9c52b028dcca
+langcode: en
+status: true
+dependencies: {  }
+id: testbed_pf_reviews
+label: 'Testbed PF Reviews'
+description: 'Migrations for pulling in testbed data exported as CSV from Kaggle Pitchfork SQlite (see kaggle-data directory)'
+source_type: CSV
+module: null
+shared_configuration: null
