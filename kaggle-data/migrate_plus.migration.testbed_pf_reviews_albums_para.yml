@@ -2,12 +2,12 @@ uuid: 4cbb8cf1-6c86-470d-a251-055905a0d070
 langcode: en
 status: true
 dependencies: {  }
-id: migrate_pf_albums_para
+id: testbed_pf_reviews_albums_para
 class: null
 field_plugin_method: null
 cck_plugin_method: null
 migration_tags: null
-migration_group: null
+migration_group: testbed_pf_reviews
 label: 'Migrate albums from pf csv exports'
 source:
   plugin: csv
