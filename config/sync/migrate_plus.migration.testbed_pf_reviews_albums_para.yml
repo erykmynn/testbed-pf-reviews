@@ -41,7 +41,10 @@ process:
     entity_type: taxonomy_term
     ignore_case: true
     source: '@tmp_label_explode'
-  field_album_rating: score
+  field_album_rating:
+    plugin: callback
+    callable: floatval
+    source: score
   field_album_title: title
 destination:
   plugin: 'entity_reference_revisions:paragraph'

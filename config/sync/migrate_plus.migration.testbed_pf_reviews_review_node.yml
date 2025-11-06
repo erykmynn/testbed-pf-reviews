@@ -17,7 +17,30 @@ source:
   ids:
     - review_url
 process:
-  title: titles
+  tmp_break_char:
+    plugin: default_value
+    default_value: '…[fafsaf-break-val]'
+  tmp_char_count:
+    plugin: default_value
+    default_value: 250
+  tmp_title_wrap:
+    -
+      plugin: callback
+      callable: wordwrap
+      unpack_source: true
+      source:
+        - titles
+        - '@tmp_char_count'
+        - '@tmp_break_char'
+        - false
+  title:
+    -
+      plugin: explode
+      delimiter: '[fafsaf-break-val]'
+      source: '@tmp_title_wrap'
+      strict: false
+    -
+      plugin: array_shift
   type:
     plugin: default_value
     default_value: review
