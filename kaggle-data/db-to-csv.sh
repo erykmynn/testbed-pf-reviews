@@ -3,7 +3,8 @@ SCRIPT_DIR="${0:A:h}"
 echo $SCRIPT_DIR
 DB_FILE="$SCRIPT_DIR/data.sqlite3"
 #optional limiter, for prod set to ""
-limit_opt="LIMIT 50"
+# limit_opt="LIMIT 50"
+limit_opt=""
 
 #db filecheck
 if [[ ! -f "$DB_FILE" ]]; then
