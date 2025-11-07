@@ -1,0 +1,59 @@
+uuid: 3239d79a-9841-4b61-ac0d-44dcc102211b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.review.field_album_detail
+    - field.field.node.review.field_artist
+    - field.field.node.review.field_author
+    - field.field.node.review.field_genre
+    - field.field.node.review.field_publish_date
+    - field.field.node.review.field_review_body
+    - field.field.node.review.field_review_url
+    - field.field.node.review.field_review_url_id
+    - field.field.node.review.field_standard_review
+    - node.type.review
+  module:
+    - datetime
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.review.teaser
+targetEntityType: node
+bundle: review
+mode: teaser
+content:
+  field_artist:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_publish_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_album_detail: true
+  field_author: true
+  field_genre: true
+  field_review_body: true
+  field_review_url: true
+  field_review_url_id: true
+  field_standard_review: true

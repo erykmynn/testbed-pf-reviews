@@ -17,27 +17,46 @@ source:
   ids:
     - review_url
 process:
-  tmp_break_char: 
-    plugin: default_value
-    default_value: '…[fafsaf-break-val]'
-  tmp_char_count:
-    plugin: default_value
-    default_value: 250
-  tmp_title_wrap:
-    - plugin: callback
-      callable: wordwrap
-      unpack_source: true
-      source:
-        - titles
-        - '@tmp_char_count'
-        - '@tmp_break_char'
-        - FALSE
+  # tmp_break_char: 
+  #   plugin: default_value
+  #   default_value: '…[fafsaf-break-val]'
+  # tmp_char_count:
+  #   plugin: default_value
+  #   default_value: 250
+  # tmp_title_wrap:
+  #   - plugin: callback
+  #     callable: wordwrap
+  #     unpack_source: true
+  #     source:
+  #       - titles
+  #       - '@tmp_char_count'
+  #       - '@tmp_break_char'
+  #       - FALSE
   title:
-    - plugin: explode
-      delimiter: '[fafsaf-break-val]'
-      source: '@tmp_title_wrap'
-      strict: FALSE
-    - plugin: array_shift
+    # - plugin: callback
+    #   callable: json_decode
+    #   source: amenities
+    # - plugin: multiple_values
+    - plugin: str_replace
+      regex: true
+      search: /$/
+      replace: " [eol-j92lv]"
+      source: titles
+    - plugin: substr
+      start: 0
+      length: 250
+    - plugin: str_replace
+      regex: true
+      search: /^(?!.*\[eol-j92lv]$).*\K\s\S*$/
+      replace: "…"
+    - plugin: str_replace
+      regex: true
+      search: /\s\[eol-j92lv\]$/
+      replace: ""
+  tmp_dump:
+    plugin: callback
+    callable: var_dump
+    source: '@title'
   type:
     plugin: default_value
     default_value: review
