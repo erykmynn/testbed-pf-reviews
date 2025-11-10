@@ -33,7 +33,8 @@ Install Drupal using the existing config files:
 
 ## Data Prep
 - Visit <https://www.kaggle.com/datasets/nolanbconaway/24169-pitchfork-reviews> and download the source data (registration may be required).
-- Unzip if necessary and drop the `.sqlite` file in `kaggle-data/` directory.
+- Unzip if necessary.
+- Ensure the `.sqlite` file is placed in `kaggle-data/` directory.
 - Run the following shell script to create importable CSVs (shown from repo root)
     -         kaggle-data/db-to-csv.sh
 
