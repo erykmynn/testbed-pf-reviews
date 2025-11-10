@@ -19,14 +19,19 @@ If you have questions or ideas please use the message and issue options here on 
 ## Install preconfigured Drupal
 (From the repo's root directory)
 Install all composer dependecies, contrib modules, etc:
-    composer install
+```
+composer install
+```
 
 Start DDEV
-    ddev start
+```
+ddev start
+```
 
 Install Drupal using the existing config files:
-    ddev drush site:install --existing-config
-
+```
+ddev drush site:install --existing-config
+```
 *Drush will provide an admin username and password.*
 
 # Data setup
@@ -36,17 +41,25 @@ Install Drupal using the existing config files:
 - Unzip if necessary.
 - Ensure the `.sqlite` file is placed in `kaggle-data/` directory.
 - Run the following shell script to create importable CSVs (shown from repo root)
-    -         kaggle-data/db-to-csv.sh
+```
+kaggle-data/db-to-csv.sh
+```
 
 ## Data Import
 Import artists as taxonomy terms:
-    ddev drush migrate:import testbed_pf_reviews_artists_taxo
+```
+ddev drush migrate:import testbed_pf_reviews_artists_taxo
+```
 
 Import album-by-album paragraph data:
-    ddev drush migrate:import testbed_pf_reviews_albums_para
+```
+ddev drush migrate:import testbed_pf_reviews_albums_para
+```
 
 Import reviews as the main nodes:
-    ddev drush migrate:import testbed_pf_reviews_review_node
+```
+ddev drush migrate:import testbed_pf_reviews_review_node
+```
 *Note: The first two must be imported before this last one (node) as the other two entities are referenced on node fields.*
 
 # Next Steps
