@@ -40,6 +40,7 @@ web/themes/contrib
 #web/themes/**/.sass-cache
 
 /kaggle-data/*.sqlite3
+/kaggle-data/*.zip
 /kaggle-data/csv/*
 
 # If you prefer to store your .gitignore file in the web/sites/ folder, comment
