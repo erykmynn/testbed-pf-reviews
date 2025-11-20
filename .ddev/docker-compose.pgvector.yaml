@@ -1,0 +1,30 @@
+services:
+  pgsql:
+    image: 'ankane/pgvector:latest'
+    ports:
+      - '${FORWARD_DB_PORT:-5432}:5432'
+    environment:
+      PGPASSWORD: 'db'
+      POSTGRES_DB: 'db'
+      POSTGRES_USER: 'db'
+      POSTGRES_PASSWORD: 'db'
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    volumes:
+      - ".:/mnt/ddev_config"
+      - 'pgsql:/var/lib/postgresql/data'
+    healthcheck:
+      test:
+        - CMD
+        - pg_isready
+        - '-q'
+        - '-d'
+        - 'db'
+        - '-U'
+        - 'db'
+      retries: 3
+      timeout: 5s
+
+volumes:
+  pgsql:
