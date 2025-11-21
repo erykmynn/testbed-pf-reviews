@@ -1,8 +1,9 @@
-uuid: 060184b9-1e01-4d98-9e0b-38f270205d6e
+uuid: a679a714-32a4-472b-a989-abea168b8332
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_index
     - field.field.node.review.field_album_detail
     - field.field.node.review.field_artist
     - field.field.node.review.field_author
@@ -16,13 +17,18 @@ dependencies:
   module:
     - datetime
     - entity_reference_revisions
+    - layout_builder
     - link
     - text
     - user
-id: node.review.default
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.review.search_index
 targetEntityType: node
 bundle: review
-mode: default
+mode: search_index
 content:
   field_album_detail:
     type: entity_reference_revisions_entity_view
@@ -35,34 +41,34 @@ content:
     region: content
   field_artist:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 102
     region: content
   field_author:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 106
     region: content
   field_genre:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 103
     region: content
   field_publish_date:
     type: datetime_default
-    label: above
+    label: inline
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: html_datetime
     third_party_settings: {  }
     weight: 107
     region: content
@@ -75,7 +81,7 @@ content:
     region: content
   field_review_url:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -87,7 +93,7 @@ content:
     region: content
   field_review_url_id:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -95,7 +101,7 @@ content:
     region: content
   field_standard_review:
     type: boolean
-    label: above
+    label: inline
     settings:
       format: default
       format_custom_false: ''

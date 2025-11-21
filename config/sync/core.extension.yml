@@ -2,8 +2,9 @@ _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
   ai: 0
+  ai_provider_ollama: 0
   ai_search: 0
-  ai_vdb_provider_pinecone: 0
+  ai_vdb_provider_postgres: 0
   block: 0
   config: 0
   contextual: 0
@@ -31,12 +32,14 @@ module:
   node: 0
   page_cache: 0
   path_alias: 0
+  pgsql: 0
   search_api: 0
   system: 0
   taxonomy: 0
   text: 0
   update: 0
   user: 0
+  view_modes_display: 0
   views_ui: 0
   yearonly: 0
   views: 10

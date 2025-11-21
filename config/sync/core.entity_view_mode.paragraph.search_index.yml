@@ -1,0 +1,11 @@
+uuid: 0d0ce5a9-f248-45d1-9c23-ac8e648cbb35
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.search_index
+label: 'Search Index'
+description: null
+targetEntityType: paragraph
+cache: true

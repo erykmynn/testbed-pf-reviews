@@ -1,0 +1,29 @@
+uuid: 9f6cceba-673a-4a47-8ca1-f9fdc8d61b78
+langcode: en
+status: true
+dependencies:
+  module:
+    - ai_search
+    - ai_vdb_provider_postgres
+id: postgres_vdb_local
+name: 'Postgres VDB (Local)'
+description: ''
+backend: search_api_ai_search
+backend_config:
+  chat_model: 'ollama__embeddinggemma:latest'
+  database: postgres
+  database_settings:
+    database_name: db
+    collection: embeddinggemma_latest
+    metric: cosine_similarity
+  embeddings_engine: 'ollama__embeddinggemma:latest'
+  embeddings_engine_configuration:
+    set_dimensions: false
+    dimensions: 768
+  embedding_strategy: contextual_chunks
+  embedding_strategy_configuration:
+    chunk_size: '2000'
+    chunk_min_overlap: '100'
+    contextual_content_max_percentage: '30'
+  embedding_strategy_details: ''
+  include_raw_embedding_vector: false
