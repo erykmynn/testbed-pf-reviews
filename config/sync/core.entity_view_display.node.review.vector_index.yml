@@ -1,9 +1,9 @@
-uuid: a679a714-32a4-472b-a989-abea168b8332
+uuid: d436ea6a-2b26-4856-8ba4-cdaa48f3c551
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.search_index
+    - core.entity_view_mode.node.vector_index
     - field.field.node.review.field_album_detail
     - field.field.node.review.field_artist
     - field.field.node.review.field_author
@@ -24,23 +24,23 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: node.review.search_index
+id: node.review.vector_index
 targetEntityType: node
 bundle: review
-mode: search_index
+mode: vector_index
 content:
   field_album_detail:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
-      view_mode: search_index
+      view_mode: vector_index
       link: ''
     third_party_settings: {  }
     weight: 1
     region: content
   field_artist:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: false
     third_party_settings: {  }
@@ -48,7 +48,7 @@ content:
     region: content
   field_author:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: false
     third_party_settings: {  }
@@ -56,7 +56,7 @@ content:
     region: content
   field_genre:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: false
     third_party_settings: {  }
@@ -64,10 +64,10 @@ content:
     region: content
   field_publish_date:
     type: datetime_default
-    label: above
+    label: inline
     settings:
       timezone_override: ''
-      format_type: html_datetime
+      format_type: medium
     third_party_settings: {  }
     weight: 6
     region: content
@@ -80,7 +80,7 @@ content:
     region: content
   field_standard_review:
     type: boolean
-    label: above
+    label: inline
     settings:
       format: default
       format_custom_false: ''

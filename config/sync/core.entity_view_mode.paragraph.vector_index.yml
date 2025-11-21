@@ -1,11 +1,11 @@
-uuid: 0d0ce5a9-f248-45d1-9c23-ac8e648cbb35
+uuid: c95a676e-89d3-492f-8eff-7bc07dbf33df
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.search_index
-label: 'Search Index'
+id: paragraph.vector_index
+label: 'Vector Index'
 description: null
 targetEntityType: paragraph
 cache: true

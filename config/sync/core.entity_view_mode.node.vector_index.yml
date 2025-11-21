@@ -1,0 +1,11 @@
+uuid: fdf61ed2-b788-4173-ab6f-f6e1dc9c9a57
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.vector_index
+label: 'Vector Index'
+description: null
+targetEntityType: node
+cache: true

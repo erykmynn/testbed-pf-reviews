@@ -34,6 +34,7 @@ module:
   path_alias: 0
   pgsql: 0
   search_api: 0
+  search_api_page: 0
   system: 0
   taxonomy: 0
   text: 0

@@ -1,9 +1,9 @@
-uuid: 94997f77-094b-4a3b-a1b1-00f53ba0c0d4
+uuid: 973acca0-f9e3-461f-8eeb-ebb3444821f1
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.search_index
+    - core.entity_view_mode.paragraph.vector_index
     - field.field.paragraph.album_detail.field_album_best_new
     - field.field.paragraph.album_detail.field_album_best_reissues
     - field.field.paragraph.album_detail.field_album_id
@@ -19,10 +19,10 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: paragraph.album_detail.search_index
+id: paragraph.album_detail.vector_index
 targetEntityType: paragraph
 bundle: album_detail
-mode: search_index
+mode: vector_index
 content:
   field_album_best_new:
     type: boolean
@@ -32,7 +32,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 4
+    weight: 2
     region: content
   field_album_best_reissues:
     type: boolean
@@ -42,14 +42,6 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 5
-    region: content
-  field_album_id:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
     weight: 3
     region: content
   field_album_label:
@@ -58,7 +50,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 8
+    weight: 5
     region: content
   field_album_rating:
     type: number_decimal
@@ -69,7 +61,7 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_album_title:
     type: string
@@ -77,14 +69,15 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_album_year:
     type: yearonly_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 4
     region: content
 hidden:
+  field_album_id: true
   search_api_excerpt: true

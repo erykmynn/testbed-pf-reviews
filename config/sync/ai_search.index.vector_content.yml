@@ -1,0 +1,24 @@
+control_field_max_length: false
+exclude_chunk_from_metadata: false
+indexing_options:
+  rendered_item:
+    indexing_option: main_content
+    max: -1
+  url:
+    indexing_option: contextual_content
+    max: -1
+  field_album_detail:
+    indexing_option: contextual_content
+    max: -1
+  field_artist:
+    indexing_option: contextual_content
+    max: -1
+  field_genre:
+    indexing_option: contextual_content
+    max: -1
+  field_publish_date:
+    indexing_option: attributes
+    max: -1
+  field_standard_review:
+    indexing_option: attributes
+    max: -1
