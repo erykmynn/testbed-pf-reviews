@@ -32,6 +32,7 @@
         "drupal/navigation_extra_tools": "^1.0",
         "drupal/paragraphs": "^1.19",
         "drupal/search_api": "^1.40",
+        "drupal/search_api_page": "^1.1",
         "drupal/view_modes_display": "^3.1",
         "drupal/yearonly": "^9.1",
         "drush/drush": "^13.6"
