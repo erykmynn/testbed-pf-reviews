@@ -1,6 +1,7 @@
 services:
   pgsql:
-    image: 'ankane/pgvector:latest'
+    container_name: ddev-${DDEV_SITENAME}-pgsql
+    image: 'pgvector/pgvector:pg17-trixie'
     ports:
       - '${FORWARD_DB_PORT:-5432}:5432'
     environment:
