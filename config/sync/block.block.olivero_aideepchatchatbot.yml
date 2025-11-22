@@ -8,7 +8,7 @@ dependencies:
     - olivero
 id: olivero_aideepchatchatbot
 theme: olivero
-region: footer_top
+region: content_below
 weight: -6
 provider: null
 plugin: ai_deepchat_block
@@ -29,10 +29,10 @@ settings:
   toggle_state: remember
   width: auto
   height: 100%
-  placement: toolbar
+  placement: bottom-right
   show_structured_results: false
-  show_copy_icon: true
+  show_copy_icon: false
   collapse_minimal: false
-  style_file: 'module:ai_chatbot:bard.yml'
+  style_file: 'module:ai_chatbot:chatgpt.yml'
   verbose_mode: true
 visibility: {  }
