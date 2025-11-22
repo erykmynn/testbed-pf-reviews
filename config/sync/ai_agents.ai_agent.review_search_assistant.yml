@@ -1,0 +1,50 @@
+uuid: e865ba85-ae4f-4280-8ce6-f8ddc59c8a5f
+langcode: en
+status: true
+dependencies: {  }
+id: review_search_assistant
+label: 'Review Search Assistant'
+description: 'Finds info about albums and their reviews.'
+system_prompt: |-
+  Help the user find relevant pages and answer queries about really cool music by using the RAG database. Assume the user wants to go deeper, so avoid shallow inference.
+
+  Use RAG to be cool.
+secured_system_prompt: '[ai_agent:agent_instructions]'
+tools:
+  'ai_search:rag_search': true
+tool_settings:
+  'ai_search:rag_search':
+    return_directly: 0
+    require_usage: 0
+    description_override: ''
+    progress_message: ''
+    use_artifacts: 0
+orchestration_agent: false
+triage_agent: false
+max_loops: 3
+default_information_tools: ''
+tool_usage_limits:
+  'ai_search:rag_search':
+    index:
+      action: force_value
+      hide_property: 1
+      values:
+        - vector_content
+    search_string:
+      action: ''
+      hide_property: 0
+      values: ''
+    amount:
+      action: force_value
+      hide_property: 1
+      values:
+        - '5'
+    min_score:
+      action: force_value
+      hide_property: 1
+      values:
+        - '0.5'
+exclude_users_role: false
+masquerade_roles: {  }
+structured_output_enabled: false
+structured_output_schema: ''

@@ -1,0 +1,33 @@
+uuid: cd5026ca-7087-4ed7-8b32-444965c2da9b
+langcode: en
+status: true
+dependencies: {  }
+id: review_search_assistant
+label: 'Review Search Assistant'
+description: ''
+system_prompt: ''
+pre_action_prompt: ''
+instructions: "Help the user find relevant pages and answer queries about really cool music by using the RAG database. Assume the user wants to go deeper, so avoid shallow inference.\r\n\r\nUse RAG to be cool."
+allow_history: session
+history_context_length: '2'
+error_message: 'I am sorry, something went terribly wrong. Please try to ask me again.'
+specific_error_messages:
+  AiBadRequestException: ''
+  AiRateLimitException: ''
+  AiQuotaException: ''
+  AiSetupFailureException: ''
+  AiRequestErrorException: ''
+llm_provider: ollama
+llm_model: 'gemma3:4b'
+llm_configuration:
+  max_tokens: 1024
+  temperature: 1.0
+  frequency_penalty: 0
+  presence_penalty: 0
+  top_p: 1.0
+actions_enabled: {  }
+roles:
+  anonymous: 0
+  authenticated: 0
+use_function_calling: false
+ai_agent: review_search_assistant
