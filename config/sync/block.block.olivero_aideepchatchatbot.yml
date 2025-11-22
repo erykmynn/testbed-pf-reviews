@@ -27,7 +27,7 @@ settings:
   first_message: "I'm the helpful bot."
   stream: null
   toggle_state: remember
-  width: auto
+  width: '42 cqi'
   height: 100%
   placement: bottom-right
   show_structured_results: false
