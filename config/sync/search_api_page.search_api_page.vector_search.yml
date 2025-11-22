@@ -1,0 +1,20 @@
+uuid: b16a57b9-05a8-4550-a6a4-9bf654c1ead5
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.vector_content
+id: vector_search
+label: 'Vector Search'
+path: vector-search
+clean_url: true
+show_all_when_no_keys: false
+index: vector_content
+limit: 15
+searched_fields:
+  field_album_detail: field_album_detail
+  rendered_item: rendered_item
+style: search_results
+view_mode_configuration: {  }
+show_search_form: true
+parse_mode: direct

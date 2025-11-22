@@ -1,0 +1,20 @@
+uuid: 63b96da4-cf43-4461-9304-1642e48f30fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.database_content
+id: database_search
+label: 'Database Search'
+path: database-search
+clean_url: true
+show_all_when_no_keys: false
+index: database_content
+limit: 15
+searched_fields:
+  field_album_detail: field_album_detail
+  rendered_item: rendered_item
+style: search_results
+view_mode_configuration: {  }
+show_search_form: true
+parse_mode: direct
