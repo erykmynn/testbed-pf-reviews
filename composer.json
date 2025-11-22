@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.3",
+        "drupal/ai_agents": "^1.2",
         "drupal/ai_provider_ollama": "^1.2@RC",
         "drupal/ai_vdb_provider_pinecone": "^1.1@beta",
         "drupal/ai_vdb_provider_postgres": "^1.0@alpha",
