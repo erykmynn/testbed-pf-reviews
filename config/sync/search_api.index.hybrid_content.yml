@@ -91,7 +91,7 @@ processor_settings:
     weights:
       preprocess_query: 0
     search_api_ai_index: vector_content
-    minimum_relevance_score: 0.2
+    minimum_relevance_score: 0.1
     number_to_return: 10
     exact_phrase_action: continue
     exact_phrase_action_reduce_number: null
