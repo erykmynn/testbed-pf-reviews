@@ -2,6 +2,9 @@ _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
   ai: 0
+  ai_agents: 0
+  ai_assistant_api: 0
+  ai_chatbot: 0
   ai_provider_ollama: 0
   ai_search: 0
   ai_vdb_provider_postgres: 0
@@ -26,6 +29,7 @@ module:
   migrate_plus: 0
   migrate_source_csv: 0
   migrate_tools: 0
+  modeler_api: 0
   mysql: 0
   navigation: 0
   navigation_extra_tools: 0

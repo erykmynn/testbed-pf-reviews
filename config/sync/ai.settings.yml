@@ -2,5 +2,17 @@ _core:
   default_config_hash: RGedRkFydKZjS0ZJ6vbtZH00KbhYVGsK-ABILHdQLyw
 prompt_logging: false
 prompt_logging_tags: ''
-default_providers: {  }
-default_vdb_provider: pinecone
+default_providers:
+  chat:
+    provider_id: ollama
+    model_id: 'gemma3:4b'
+  chat_with_complex_json:
+    provider_id: ollama
+    model_id: 'gemma3:4b'
+  chat_with_structured_response:
+    provider_id: ollama
+    model_id: 'gemma3:4b'
+  embeddings:
+    provider_id: ollama
+    model_id: 'embeddinggemma:latest'
+default_vdb_provider: postgres
