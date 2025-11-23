@@ -22,3 +22,6 @@ indexing_options:
   field_standard_review:
     indexing_option: attributes
     max: -1
+  title:
+    indexing_option: contextual_content
+    max: -1

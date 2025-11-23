@@ -22,7 +22,7 @@ field_settings:
     label: 'Album Detail'
     datasource_id: 'entity:node'
     property_path: field_album_detail
-    type: text
+    type: string
     dependencies:
       config:
         - field.storage.node.field_album_detail
@@ -30,7 +30,7 @@ field_settings:
     label: Artist
     datasource_id: 'entity:node'
     property_path: field_artist
-    type: integer
+    type: string
     dependencies:
       config:
         - field.storage.node.field_artist
@@ -38,7 +38,7 @@ field_settings:
     label: Genre
     datasource_id: 'entity:node'
     property_path: field_genre
-    type: integer
+    type: string
     dependencies:
       config:
         - field.storage.node.field_genre
@@ -69,6 +69,14 @@ field_settings:
         'entity:node':
           ':default': vector_index
           review: ':default'
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
   url:
     label: URI
     property_path: search_api_url

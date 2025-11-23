@@ -17,5 +17,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   on_label: 'True'
-  off_label: Fales
+  off_label: 'False'
 field_type: boolean
