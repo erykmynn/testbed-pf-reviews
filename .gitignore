@@ -43,6 +43,7 @@ web/themes/contrib
 /kaggle-data/*.zip
 /kaggle-data/csv/*
 
+.ddev/milvus/
 # If you prefer to store your .gitignore file in the web/sites/ folder, comment
 # or delete the previous settings and uncomment the following ones, instead.
 
